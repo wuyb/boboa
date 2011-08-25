@@ -29,6 +29,7 @@
 @synthesize retweetedStatus;
 @synthesize numberOfComments;
 @synthesize comments;
+@synthesize deleted;
 
 - (id)init
 {

@@ -50,6 +50,7 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
         if (errorDesc) {
             // fatal error, just return nil, let the user determine what to do
             NSLog(@"Error reading plist: %@, format: %lu", errorDesc, format);
+            [self release];
             return nil;
         }
         if (!conf) {
@@ -272,7 +273,6 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
          didFailedSelector:NSSelectorFromString(@"failed:withError:")
      ];
 }
-
 
 -(void) getComments
 {

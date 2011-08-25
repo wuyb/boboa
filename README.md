@@ -8,7 +8,7 @@ The Plan
 ========
 I plan to open source the software piece by piece. 
 
-1. The module to talk with Weibo.com server. (done)
+1. The module to talk with Weibo.com server.
 2. The user information management module.
 3. The basic UI including displaying the statuses, user comments and reposts.
 4. Other stuff.

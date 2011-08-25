@@ -19,6 +19,7 @@
     long long numberOfComments;
     bool favorited;
     bool truncated;
+    bool deleted;
     NSString *source;
     NSString *text;
     NSString *inReplyToScreenName;
@@ -52,5 +53,6 @@
 @property (retain) NSArray *annotations;
 @property long long numberOfComments;
 @property (retain) NSArray *comments;
+@property bool deleted;
 
 @end

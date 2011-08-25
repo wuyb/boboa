@@ -62,6 +62,8 @@ typedef enum {
 // If the parameter(s) is -1, it(they) will be ignored.
 -(void) getFriendsTimelineSince:(long) sinceId withCount:(int) count;
 
+// Gets the (first 'count') statuses of user's followees bfore the given beforeId.
+// If the parameter(s) is -1, it(they) will be ignored.
 -(void) getFriendsTimelineBefore:(long) beforeId withCount:(int) count;
 
 // Gets the statuses of user's followees, using the given parameters.
