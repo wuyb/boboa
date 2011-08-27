@@ -16,4 +16,5 @@ I plan to open source the software piece by piece.
 Copyright and License
 =====================
 Copyright 2011 Yanbo Wu
+
 Licensed under the MIT License. You may obtain a copy of the License in the license.txt file.
