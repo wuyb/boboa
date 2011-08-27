@@ -31,7 +31,6 @@
 		8A9D9C241405121800487E4A /* OAServiceTicket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D9C161405121800487E4A /* OAServiceTicket.m */; };
 		8A9D9C251405121800487E4A /* OAToken_KeychainExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D9C171405121800487E4A /* OAToken_KeychainExtensions.m */; };
 		8A9D9C261405121800487E4A /* OAToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D9C181405121800487E4A /* OAToken.m */; };
-		8A9D9C2C1405125000487E4A /* BBWeiboTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D9C2B1405125000487E4A /* BBWeiboTest.m */; };
 		8A9D9C2E1405182100487E4A /* sinaweibo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A9D9C2D1405182100487E4A /* sinaweibo.plist */; };
 		8A9D9C301405184600487E4A /* sinaweibo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A9D9C2F1405184600487E4A /* sinaweibo.plist */; };
 		8AB941BD1405BA8C00F128AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AB941BC1405BA8C00F128AB /* InfoPlist.strings */; };
@@ -40,6 +39,8 @@
 		8AC157F614051D76000ED601 /* BBComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC157F514051D76000ED601 /* BBComment.m */; };
 		8AC157F914051D85000ED601 /* BBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC157F814051D85000ED601 /* BBUser.m */; };
 		8AC157FC14051E8F000ED601 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC157FB14051E8F000ED601 /* JSONKit.m */; };
+		8AD65DA214088CB000420F4D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AD65DA114088CB000420F4D /* logo.png */; };
+		8AD65DA714089EFE00420F4D /* BBWeiboTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD65DA614089EFE00420F4D /* BBWeiboTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +102,6 @@
 		8A9D9C161405121800487E4A /* OAServiceTicket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAServiceTicket.m; path = ThirdParty/OAConsumer/OAServiceTicket.m; sourceTree = "<group>"; };
 		8A9D9C171405121800487E4A /* OAToken_KeychainExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAToken_KeychainExtensions.m; path = ThirdParty/OAConsumer/OAToken_KeychainExtensions.m; sourceTree = "<group>"; };
 		8A9D9C181405121800487E4A /* OAToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OAToken.m; path = ThirdParty/OAConsumer/OAToken.m; sourceTree = "<group>"; };
-		8A9D9C2B1405125000487E4A /* BBWeiboTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBWeiboTest.m; sourceTree = "<group>"; };
 		8A9D9C2D1405182100487E4A /* sinaweibo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sinaweibo.plist; sourceTree = "<group>"; };
 		8A9D9C2F1405184600487E4A /* sinaweibo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sinaweibo.plist; sourceTree = "<group>"; };
 		8AB941B11405B71800F128AB /* boboaAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boboaAppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +120,8 @@
 		8AC157F514051D76000ED601 /* BBComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBComment.m; sourceTree = "<group>"; };
 		8AC157F814051D85000ED601 /* BBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBUser.m; sourceTree = "<group>"; };
 		8AC157FB14051E8F000ED601 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ThirdParty/JSONKit/JSONKit.m; sourceTree = "<group>"; };
+		8AD65DA114088CB000420F4D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = boboa/resources/logo.png; sourceTree = "<group>"; };
+		8AD65DA614089EFE00420F4D /* BBWeiboTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBWeiboTest.m; path = weibo/BBWeiboTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		8A4000B71405046000CF1507 = {
 			isa = PBXGroup;
 			children = (
+				8AD65D9D14088C4A00420F4D /* resources */,
 				8AB941C21405CBD600F128AB /* license.txt */,
 				8AB941C11405CAB300F128AB /* README.md */,
 				8A9D9BD714050EFD00487E4A /* ThirdParty */,
@@ -299,7 +302,7 @@
 		8A9D9C091405118200487E4A /* weibo */ = {
 			isa = PBXGroup;
 			children = (
-				8A9D9C2B1405125000487E4A /* BBWeiboTest.m */,
+				8AD65DA614089EFE00420F4D /* BBWeiboTest.m */,
 				8AB941BE1405BAC300F128AB /* BBWeiboTest.h */,
 			);
 			name = weibo;
@@ -312,6 +315,14 @@
 				8AC157FB14051E8F000ED601 /* JSONKit.m */,
 			);
 			name = JSONKit;
+			sourceTree = "<group>";
+		};
+		8AD65D9D14088C4A00420F4D /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AD65DA114088CB000420F4D /* logo.png */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +399,7 @@
 				8A4000DD1405046000CF1507 /* MainMenu.xib in Resources */,
 				8A9D9C301405184600487E4A /* sinaweibo.plist in Resources */,
 				8AB941BD1405BA8C00F128AB /* InfoPlist.strings in Resources */,
+				8AD65DA214088CB000420F4D /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +457,7 @@
 				8AC157F614051D76000ED601 /* BBComment.m in Sources */,
 				8AC157F914051D85000ED601 /* BBUser.m in Sources */,
 				8AC157FC14051E8F000ED601 /* JSONKit.m in Sources */,
+				8AD65DA714089EFE00420F4D /* BBWeiboTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +465,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A9D9C2C1405125000487E4A /* BBWeiboTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
