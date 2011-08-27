@@ -141,22 +141,22 @@ typedef enum {
 -(void) getCounts:(NSArray *) ids;
 
 // Gets repost timeline for the given status.
--(void) getRepostTimelineFor:(long)id;
+-(void) getRepostTimelineForStatus:(long)id;
 
 // Gets repost timeline for the given status since the given sinceId.
--(void) getRepostTimelineFor:(long)id since:(long)sinceId withCount:(int)count;
+-(void) getRepostTimelineForStatus:(long)id since:(long)sinceId withCount:(int)count;
 
 // Gets repost timeline for the given status with given parameters.
--(void) getRepostTimelineFor:(long)id withParameters:(NSArray *)parameters;
+-(void) getRepostTimelineForStatus:(long)id withParameters:(NSArray *)parameters;
 
 // Gets repost timeline by given user for the given status.
--(void) getRepostTimelineBy:(long)id;
+-(void) getRepostTimelineByUser:(long)id;
 
 // Gets repost timeline by given user for the given status since the given sinceId.
--(void) getRepostTimelineBy:(long)id since:(long)sinceId withCount:(int)count;
+-(void) getRepostTimelineByUser:(long)id since:(long)sinceId withCount:(int)count;
 
 // Gets repost timeline by given user for the given status with given parameters.
--(void) getRepostTimelineBy:(long)id withParameters:(NSArray *)parameters;
+-(void) getRepostTimelineByUser:(long)id withParameters:(NSArray *)parameters;
 
 // Resets the count of the given type (1-4: comments, mentioned, private message, followees).
 -(void) resetCountForType:(int)type;

@@ -379,40 +379,40 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
      ];
 }
 
--(void) getRepostTimelineFor:(long)id
+-(void) getRepostTimelineForStatus:(long)id
 {
-    [self getRepostTimelineFor:id since:-1 withCount:-1];
+    [self getRepostTimelineForStatus:id since:-1 withCount:-1];
 }
 
--(void) getRepostTimelineFor:(long)id since:(long)sinceId withCount:(int)count
+-(void) getRepostTimelineForStatus:(long)id since:(long)sinceId withCount:(int)count
 {
-    [self getRepostTimelineFor:id withParameters:[self prepareParametersWithSinceId:sinceId count:count]];
+    [self getRepostTimelineForStatus:id withParameters:[self prepareParametersWithSinceId:sinceId count:count]];
 }
 
--(void) getRepostTimelineFor:(long)id withParameters:(NSArray *)parameters
+-(void) getRepostTimelineForStatus:(long)id withParameters:(NSArray *)parameters
 {
     NSMutableArray *params = [NSMutableArray arrayWithArray:parameters];
     [params addObject:[[[OARequestParameter alloc] initWithName:@"id"
                                                           value:[NSString stringWithFormat:@"%ld", id]] autorelease]];
     [self fetchDataFromUrl:[conf objectForKey:@"repost_timeline_url"]
             withParameters:params
-       didFinishedSelector:NSSelectorFromString(@"getRepostTimelineFinished:withData:")
+       didFinishedSelector:NSSelectorFromString(@"getRepostTimelineForStatusFinished:withData:")
          didFailedSelector:NSSelectorFromString(@"failed:withError:")
      ];
     
 }
 
--(void) getRepostTimelineBy:(long)id
+-(void) getRepostTimelineByUser:(long)id
 {
-    [self getRepostTimelineBy:id since:-1 withCount:-1];
+    [self getRepostTimelineByUser:id since:-1 withCount:-1];
 }
 
--(void) getRepostTimelineBy:(long)id since:(long)sinceId withCount:(int)count
+-(void) getRepostTimelineByUser:(long)id since:(long)sinceId withCount:(int)count
 {
-    [self getRepostTimelineBy:id withParameters:[self prepareParametersWithSinceId:sinceId count:count]];
+    [self getRepostTimelineByUser:id withParameters:[self prepareParametersWithSinceId:sinceId count:count]];
 }
 
--(void) getRepostTimelineBy:(long)id withParameters:(NSArray *)parameters
+-(void) getRepostTimelineByUser:(long)id withParameters:(NSArray *)parameters
 {
     NSMutableArray *params = [NSMutableArray arrayWithArray:parameters];
     [params addObject:[[[OARequestParameter alloc] initWithName:@"id"
@@ -561,7 +561,6 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
 {
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
 						 text, @"status",
-						 @"3024838837", @"source",
                          nil];
     
     NSString *param = [self nameValString:dic];
@@ -576,7 +575,6 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
     [data appendData:[footer dataUsingEncoding:NSUTF8StringEncoding]];
     
 	NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:0];
-	[params setObject:@"3024838837" forKey:@"source"];
 	[params setObject:text forKey:@"status"];
     
     NSString *path = [conf objectForKey:@"upload_url"];
@@ -602,11 +600,10 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
     
     OAAsynchronousDataFetcher * fetcher = [OAAsynchronousDataFetcher asynchronousFetcherWithRequest:oaReq 
                                                                                        delegate:delegate
-                                                                              didFinishSelector:@selector(postFinished:withData:)
+                                                                              didFinishSelector:@selector(uploadFinished:withData:)
                                                                                 didFailSelector:@selector(failed:withError:)];
     
     [fetcher start];
-    
 }
 
 
@@ -966,7 +963,7 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
     OARequestParameter *idParam = [[[OARequestParameter alloc] initWithName:@"user_id"
                                                                       value:[NSString stringWithFormat:@"%ld", id]] autorelease];
     [params addObject:idParam];
-    [self fetchDataFromUrl:[conf objectForKey:@"block_url"]
+    [self postDataToUrl:[conf objectForKey:@"block_url"]
             withParameters:params
        didFinishedSelector:NSSelectorFromString(@"blockFinished:withData:")
          didFailedSelector:NSSelectorFromString(@"failed:withError:")
@@ -979,7 +976,7 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
     OARequestParameter *idParam = [[[OARequestParameter alloc] initWithName:@"user_id"
                                                                       value:[NSString stringWithFormat:@"%ld", id]] autorelease];
     [params addObject:idParam];
-    [self fetchDataFromUrl:[conf objectForKey:@"unblock_url"]
+    [self postDataToUrl:[conf objectForKey:@"unblock_url"]
             withParameters:params
        didFinishedSelector:NSSelectorFromString(@"unblockFinished:withData:")
          didFailedSelector:NSSelectorFromString(@"failed:withError:")

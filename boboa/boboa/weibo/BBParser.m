@@ -81,9 +81,9 @@ static BBParser *sharedInstance;
             NSDictionary *dict = (NSDictionary *) data;
             for (NSString *key in [dict allKeys]) {
                 id value = [dict objectForKey:key];
-                key = [self underscoreToCaptialized:key];
+                NSString *capKey = [self underscoreToCaptialized:key];
                 if (value != [NSNull null]) {
-                    [obj setValue:[self decode:value as:[classes objectForKey:key]] forKey:key];
+                    [obj setValue:[self decode:value as:[classes objectForKey:key]] forKey:capKey];
                 }
             }
             return obj;

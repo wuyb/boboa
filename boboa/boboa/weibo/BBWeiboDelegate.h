@@ -23,11 +23,12 @@
 -(void) getCommentsToMeFinished: (OAServiceTicket *) tickets withData: (id) data;
 -(void) getCommentsToStatusFinished: (OAServiceTicket *) tickets withData: (id) data;
 -(void) getCountsFinished: (OAServiceTicket *) tickets withData: (id) data;
--(void) getRepostTimelineFinished: (OAServiceTicket *) tickets withData: (id) data;
+-(void) getRepostTimelineForStatusFinished: (OAServiceTicket *) tickets withData: (id) data;
 -(void) getRepostTimelineByUserFinished: (OAServiceTicket *) tickets withData: (id) data;
 -(void) resetCountFinished: (OAServiceTicket *) tickets withData: (id) data;
 -(void) getEmotionsFinished: (OAServiceTicket *) tickets withData: (id) data;
 -(void) postFinished: (OAServiceTicket *) tickets withData: (id) data;
+-(void) uploadFinished: (OAServiceTicket *) tickets withData: (id) data;
 -(void) repostFinished: (OAServiceTicket *) tickets withData: (id) data;
 -(void) destroyFinished: (OAServiceTicket *) tickets withData: (id) data;
 -(void) createFavoriteFinished: (OAServiceTicket *) tickets withData: (id) data;
