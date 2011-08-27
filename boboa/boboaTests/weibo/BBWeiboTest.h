@@ -11,8 +11,9 @@
 
 @interface BBWeiboTest : SenTestCase <BBWeiboDelegate> {
 @private
-    BBWeibo *weibo;
-    bool done;
+    BBWeibo*    weibo;
+    bool        done;
+    long        lastRand;
 }
 
 -(void)sleepUntilDone;
