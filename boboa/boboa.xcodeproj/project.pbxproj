@@ -11,9 +11,9 @@
 		8A4000D31405046000CF1507 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4000D21405046000CF1507 /* main.m */; };
 		8A4000DA1405046000CF1507 /* boboaAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4000D91405046000CF1507 /* boboaAppDelegate.m */; };
 		8A4000DD1405046000CF1507 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4000DB1405046000CF1507 /* MainMenu.xib */; };
-		8A4000E51405046000CF1507 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4000E41405046000CF1507 /* SenTestingKit.framework */; };
 		8A4000E61405046000CF1507 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4000C61405046000CF1507 /* Cocoa.framework */; };
 		8A4000EE1405046000CF1507 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A4000EC1405046000CF1507 /* InfoPlist.strings */; };
+		8A9D2361140FE5ED00889A06 /* BBAuthorizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D2360140FE5ED00889A06 /* BBAuthorizer.m */; };
 		8A9D9B50140508C800487E4A /* BBWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9D9B4F140508C800487E4A /* BBWeibo.m */; };
 		8A9D9C071405113600487E4A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9D9C051405113600487E4A /* Security.framework */; };
 		8A9D9C081405113600487E4A /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9D9C061405113600487E4A /* SecurityFoundation.framework */; };
@@ -40,7 +40,13 @@
 		8AC157F914051D85000ED601 /* BBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC157F814051D85000ED601 /* BBUser.m */; };
 		8AC157FC14051E8F000ED601 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AC157FB14051E8F000ED601 /* JSONKit.m */; };
 		8AD65DA214088CB000420F4D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AD65DA114088CB000420F4D /* logo.png */; };
-		8AD65DA714089EFE00420F4D /* BBWeiboTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD65DA614089EFE00420F4D /* BBWeiboTest.m */; };
+		8AF8CE4414177C27004C5CFD /* BBWeiboTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD65DA614089EFE00420F4D /* BBWeiboTest.m */; };
+		8AF8CE4614177C3A004C5CFD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF8CE4514177C3A004C5CFD /* SenTestingKit.framework */; };
+		8AF8CE5714178316004C5CFD /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8CE5614178316004C5CFD /* SSKeychain.m */; };
+		8AF8CE611417908C004C5CFD /* boboa.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8CE601417908C004C5CFD /* boboa.icns */; };
+		8AF8CE6414179234004C5CFD /* BBAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF8CE6314179234004C5CFD /* BBAuthController.m */; };
+		8AF8CE6614179274004C5CFD /* BBAuth.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8CE6514179274004C5CFD /* BBAuth.xib */; };
+		8AF8CE681417990C004C5CFD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF8CE671417990C004C5CFD /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +71,6 @@
 		8A4000D91405046000CF1507 /* boboaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = boboaAppDelegate.m; sourceTree = "<group>"; };
 		8A4000DC1405046000CF1507 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8A4000E31405046000CF1507 /* boboaTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = boboaTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A4000E41405046000CF1507 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		8A4000EB1405046000CF1507 /* boboaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "boboaTests-Info.plist"; sourceTree = "<group>"; };
 		8A4000ED1405046000CF1507 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8A8D57721407B68300D3C953 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64Transcoder.h; path = ThirdParty/OAConsumer/Base64Transcoder.h; sourceTree = "<group>"; };
@@ -85,6 +90,8 @@
 		8A8D57801407B68300D3C953 /* OAToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAToken.h; path = ThirdParty/OAConsumer/OAToken.h; sourceTree = "<group>"; };
 		8A8D57811407B68300D3C953 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OAuthConsumer.h; path = ThirdParty/OAConsumer/OAuthConsumer.h; sourceTree = "<group>"; };
 		8A8D57821407B69200D3C953 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = ThirdParty/JSONKit/JSONKit.h; sourceTree = "<group>"; };
+		8A9D235F140FE5ED00889A06 /* BBAuthorizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBAuthorizer.h; sourceTree = "<group>"; };
+		8A9D2360140FE5ED00889A06 /* BBAuthorizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBAuthorizer.m; sourceTree = "<group>"; };
 		8A9D9B4F140508C800487E4A /* BBWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBWeibo.m; sourceTree = "<group>"; };
 		8A9D9C051405113600487E4A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8A9D9C061405113600487E4A /* SecurityFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityFoundation.framework; path = System/Library/Frameworks/SecurityFoundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +129,14 @@
 		8AC157FB14051E8F000ED601 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = ThirdParty/JSONKit/JSONKit.m; sourceTree = "<group>"; };
 		8AD65DA114088CB000420F4D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = boboa/resources/logo.png; sourceTree = "<group>"; };
 		8AD65DA614089EFE00420F4D /* BBWeiboTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBWeiboTest.m; path = weibo/BBWeiboTest.m; sourceTree = "<group>"; };
+		8AF8CE4514177C3A004C5CFD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = SDKROOT; };
+		8AF8CE5514178316004C5CFD /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = ThirdParty/SSKeychain/SSKeychain.h; sourceTree = "<group>"; };
+		8AF8CE5614178316004C5CFD /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = ThirdParty/SSKeychain/SSKeychain.m; sourceTree = "<group>"; };
+		8AF8CE601417908C004C5CFD /* boboa.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = boboa.icns; path = boboa/resources/boboa.icns; sourceTree = "<group>"; };
+		8AF8CE6214179234004C5CFD /* BBAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BBAuthController.h; path = vc/BBAuthController.h; sourceTree = "<group>"; };
+		8AF8CE6314179234004C5CFD /* BBAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BBAuthController.m; path = vc/BBAuthController.m; sourceTree = "<group>"; };
+		8AF8CE6514179274004C5CFD /* BBAuth.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BBAuth.xib; path = vc/BBAuth.xib; sourceTree = "<group>"; };
+		8AF8CE671417990C004C5CFD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +144,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF8CE681417990C004C5CFD /* WebKit.framework in Frameworks */,
 				8A9D9C071405113600487E4A /* Security.framework in Frameworks */,
 				8A9D9C081405113600487E4A /* SecurityFoundation.framework in Frameworks */,
 				8A4000C71405046000CF1507 /* Cocoa.framework in Frameworks */,
@@ -139,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A4000E51405046000CF1507 /* SenTestingKit.framework in Frameworks */,
+				8AF8CE4614177C3A004C5CFD /* SenTestingKit.framework in Frameworks */,
 				8A4000E61405046000CF1507 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,10 +189,11 @@
 		8A4000C51405046000CF1507 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8AF8CE671417990C004C5CFD /* WebKit.framework */,
+				8AF8CE4514177C3A004C5CFD /* SenTestingKit.framework */,
 				8A9D9C051405113600487E4A /* Security.framework */,
 				8A9D9C061405113600487E4A /* SecurityFoundation.framework */,
 				8A4000C61405046000CF1507 /* Cocoa.framework */,
-				8A4000E41405046000CF1507 /* SenTestingKit.framework */,
 				8A4000C81405046000CF1507 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -195,6 +212,8 @@
 		8A4000CC1405046000CF1507 /* boboa */ = {
 			isa = PBXGroup;
 			children = (
+				8AF8CE5914178E5D004C5CFD /* vc */,
+				8AF8CE5814178E4E004C5CFD /* bui */,
 				8A9D9B48140507B700487E4A /* weibo */,
 				8A4000D91405046000CF1507 /* boboaAppDelegate.m */,
 				8AB941B11405B71800F128AB /* boboaAppDelegate.h */,
@@ -249,6 +268,8 @@
 				8AB941BB1405B96900F128AB /* BBWeibo.h */,
 				8A9D9B4F140508C800487E4A /* BBWeibo.m */,
 				8AB941BA1405B92A00F128AB /* BBWeiboDelegate.h */,
+				8A9D235F140FE5ED00889A06 /* BBAuthorizer.h */,
+				8A9D2360140FE5ED00889A06 /* BBAuthorizer.m */,
 			);
 			path = weibo;
 			sourceTree = "<group>";
@@ -256,6 +277,7 @@
 		8A9D9BD714050EFD00487E4A /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				8AF8CE4714177D77004C5CFD /* SSKeychain */,
 				8AC157E914051C61000ED601 /* JSONKit */,
 				8A9D9BD814050F0D00487E4A /* OAConsumer */,
 			);
@@ -320,9 +342,36 @@
 		8AD65D9D14088C4A00420F4D /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				8AF8CE601417908C004C5CFD /* boboa.icns */,
 				8AD65DA114088CB000420F4D /* logo.png */,
 			);
 			name = resources;
+			sourceTree = "<group>";
+		};
+		8AF8CE4714177D77004C5CFD /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				8AF8CE5514178316004C5CFD /* SSKeychain.h */,
+				8AF8CE5614178316004C5CFD /* SSKeychain.m */,
+			);
+			name = SSKeychain;
+			sourceTree = "<group>";
+		};
+		8AF8CE5814178E4E004C5CFD /* bui */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = bui;
+			sourceTree = "<group>";
+		};
+		8AF8CE5914178E5D004C5CFD /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				8AF8CE6214179234004C5CFD /* BBAuthController.h */,
+				8AF8CE6314179234004C5CFD /* BBAuthController.m */,
+				8AF8CE6514179274004C5CFD /* BBAuth.xib */,
+			);
+			name = vc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +449,8 @@
 				8A9D9C301405184600487E4A /* sinaweibo.plist in Resources */,
 				8AB941BD1405BA8C00F128AB /* InfoPlist.strings in Resources */,
 				8AD65DA214088CB000420F4D /* logo.png in Resources */,
+				8AF8CE611417908C004C5CFD /* boboa.icns in Resources */,
+				8AF8CE6614179274004C5CFD /* BBAuth.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +508,9 @@
 				8AC157F614051D76000ED601 /* BBComment.m in Sources */,
 				8AC157F914051D85000ED601 /* BBUser.m in Sources */,
 				8AC157FC14051E8F000ED601 /* JSONKit.m in Sources */,
-				8AD65DA714089EFE00420F4D /* BBWeiboTest.m in Sources */,
+				8A9D2361140FE5ED00889A06 /* BBAuthorizer.m in Sources */,
+				8AF8CE5714178316004C5CFD /* SSKeychain.m in Sources */,
+				8AF8CE6414179234004C5CFD /* BBAuthController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +518,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AF8CE4414177C27004C5CFD /* BBWeiboTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

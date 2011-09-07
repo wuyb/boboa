@@ -6,6 +6,7 @@
 //
 
 #import "boboaAppDelegate.h"
+#import "BBAuthorizer.h"
 
 @implementation boboaAppDelegate
 
@@ -13,7 +14,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    if (![[BBAuthorizer sinaAuthorizer] isAuthorized]) {
+        [[NSBundle mainBundle] loadNibFile:@"BBAuth" externalNameTable:nil withZone:nil];
+    }
 }
 
 @end
