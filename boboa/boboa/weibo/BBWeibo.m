@@ -84,7 +84,6 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
                                                           signatureProvider:[[[OAHMAC_SHA1SignatureProvider alloc] init] autorelease]];
     [request setHTTPMethod:@"GET"];
     [request setParameters:params];
-    [request prepare];
     
     OAAsynchronousDataFetcher *fetcher = [OAAsynchronousDataFetcher asynchronousFetcherWithRequest:request
                                           delegate:delegate
@@ -105,7 +104,6 @@ NSString *TWITTERFON_FORM_BOUNDARY = @"0194784892923";
                                                           signatureProvider:[[[OAHMAC_SHA1SignatureProvider alloc] init] autorelease]];
     [request setHTTPMethod:@"POST"];
     [request setParameters:params];
-    [request prepare];
     
     OAAsynchronousDataFetcher *fetcher = [OAAsynchronousDataFetcher asynchronousFetcherWithRequest:request
                                                                                           delegate:delegate
